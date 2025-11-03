@@ -1,13 +1,11 @@
 import React from 'react';
+import { Ionicons } from '@expo/vector-icons';
 import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 
 const Profile = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Image
-        source={{ uri: 'https://via.placeholder.com/120' }}
-        style={styles.avatar}
-      />
+    <View style={styles.container}>
+      <Ionicons name="person-circle" color="#fff" size={100} />
       <Text style={styles.name}>User</Text>
       <Text style={styles.email}>cyndie@example.com</Text>
 
@@ -26,30 +24,30 @@ const Profile = () => {
       <TouchableOpacity style={styles.logout}>
         <Text style={styles.logoutText}>Log Out</Text>
       </TouchableOpacity>
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', backgroundColor: '#fff', padding: 20 },
+  container: { flex: 1, alignItems: 'center', backgroundColor: '#ff4b5c', padding: 20 },
   avatar: { width: 120, height: 120, borderRadius: 60, marginBottom: 12 },
-  name: { fontSize: 22, fontWeight: 'bold' },
-  email: { color: 'gray', marginBottom: 20 },
-  section: { width: '100%', marginTop: 20 },
+  name: { fontSize: 22, fontWeight: 700, color:"#fff"},
+  email: {marginBottom: 20, color:"#fff" },
+  section: { width: '100%', marginTop: 20},
   option: {
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    borderBottomColor: '#fff',
   },
   optionText: { fontSize: 16 },
   logout: {
     marginTop: 40,
-    backgroundColor: '#ff4b5c',
+    backgroundColor: '#fff',
     padding: 12,
     borderRadius: 8,
     width: '80%',
   },
-  logoutText: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
+  logoutText: { color: '#ff4b5c', textAlign: 'center', fontWeight: 'bold' },
 });
 
 export default Profile;
